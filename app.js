@@ -4,7 +4,7 @@ const bodyParser = require('body-parser');
 
 const cors = require('cors')
 
-const UserRouter = require('./api/routes/User')
+// const UserRouter = require('./api/routes/User')
 const FormRouter = require('./api/routes/FormRoute')
 const MeetingRouter = require('./api/routes/meetingForm')
 
@@ -36,7 +36,7 @@ app.use(bodyParser.json())
 
 
 
-app.use('/user', UserRouter)
+// app.use('/user', UserRouter)
 app.use('/', FormRouter)
 app.use('/meeting', MeetingRouter)
 

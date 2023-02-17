@@ -5,13 +5,14 @@ const FormData = require('../modules/FormSchema');
 
 router.get('/', (req, res) =>{
     try {
-        FormData.find()
-        .then((result) =>{
-            res.status(200).json({
-                message: 'Done...',
-                All_data: result
-            })
-        })
+      res.send('OK')
+        // FormData.find()
+        // .then((result) =>{
+        //     res.status(200).json({
+        //         message: 'Done...',
+        //         All_data: result
+        //     })
+        // })
     } catch (error) {
         res.send('worng')
     }

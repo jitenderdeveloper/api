@@ -6,7 +6,7 @@ router.get("/", (req, res) => {
   try {
     MeetingForm.find().then((result) => {
       res.status(200).json({
-        message: "Done...",
+        message: "All Data is Done...",
         All_data: result,
       });
     });
@@ -20,14 +20,15 @@ router.post("/", (req, res) => {
     const metting_form = new MeetingForm({
       name: req.body.name,
       email: req.body.email,
+      date: req.body.date,
       schedule: req.body.schedule,
       description: req.body.description,
     });
     metting_form.save().then((result) => {
-      console.log("form data ->", result);
+      // console.log("form data ->", result);
       res.status(200).json({
         message: "Data is successfully Done..",
-        MeetingForm: result,
+        Meeting_Schedules: result,
       });
     });
   } catch (error) {

@@ -4,7 +4,7 @@ const mettigSchema = new mongoose.Schema(
   {
     name: {
       type: String,
-      require: true,
+      required: true,
     },
     email: {
       type: String,
@@ -15,13 +15,17 @@ const mettigSchema = new mongoose.Schema(
       match:
         /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
     },
+    date: {
+      type: String,
+      required: true,
+    },
     schedule: {
       type: String,
-      require: true,
+      required: true,
     },
     description: {
       type: String,
-      require: true,
+      required: true,
     },
   },
   {

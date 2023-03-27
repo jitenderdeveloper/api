@@ -6,7 +6,7 @@ const cors = require('cors')
 
 // const UserRouter = require('./api/routes/User')
 const FormRouter = require('./api/routes/FormRoute')
-const MeetingRouter = require('./api/routes/meetingForm')
+const MediaServicesRouter = require('./api/routes/MediaServices')
 
 
 
@@ -38,7 +38,7 @@ app.use(bodyParser.json())
 
 // app.use('/user', UserRouter)
 app.use('/', FormRouter)
-app.use('/meeting', MeetingRouter)
+app.use('/api/mediaservices/admin', MediaServicesRouter)
 
 
 app.use((req, res)=>{

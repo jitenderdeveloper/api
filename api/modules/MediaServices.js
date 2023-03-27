@@ -1,10 +1,17 @@
 const mongoose = require("mongoose");
 
-const mettigSchema = new mongoose.Schema(
+const MediaServices = new mongoose.Schema(
   {
     name: {
       type: String,
       required: true,
+    },
+    phone: {
+      type: String,
+      required: true,
+      index: {
+        unique: true,
+      },
     },
     email: {
       type: String,
@@ -12,20 +19,9 @@ const mettigSchema = new mongoose.Schema(
       index: {
         unique: true,
       },
-      match:
-        /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
-    },
-    date: {
-      type: String,
-      required: true,
-    },
-    schedule: {
-      type: String,
-      required: true,
     },
     description: {
       type: String,
-      required: true,
     },
   },
   {
@@ -33,4 +29,4 @@ const mettigSchema = new mongoose.Schema(
   }
 );
 
-module.exports = mongoose.model("MeetingSchema", mettigSchema);
+module.exports = mongoose.model("MediaService", MediaServices);
